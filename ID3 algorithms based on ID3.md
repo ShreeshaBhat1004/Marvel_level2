@@ -1,12 +1,23 @@
-# ID3 Algorithms based on Decision trees
----------------------------------------------------------------------------------------------------
-des are both re and cl 
-research on diagnosis-Related group grouping of impatient medical expenditure in colorectal cancer patients
-Hemogram based decision tree for predicting the metabolic syndrome and cardiovascular diseases in elderly
-Data collection on violence against Women and Covid-19: Decision tree
-----------------------------------------------------------------------------------------------
-In the first video, it starts to explain about common construct of the decision tree. Basically it is a yes or no thing. But it keeps on going further... for example, lets say we want to predict something and it has multiple features
-------------------------------------------------------------------------------------------------
-## Decision trees: 
-Decision trees can do both regression and classification tasks. Lets say you want to predict something... Like, will it rain today in Bangalore or not, what are the factors affecting the rain, lets take cloudiness,humidity and wind speed. Lets say we have a good amount of data regarding weather conditions in UVCE. Then we can predict the future weather. 
+# Decision tree based ID3 Algorithm
+**Decision tree** algorithm is a branch of Machine learning, it is a recursive algorithm which traverses a dataset by keeping a root node and moving onto its branches or child nodes by only considering non-traversed nodes.We can perform regression(numerical prediction) tasks as well as Classification(yes or no prediction) tasks using Decision trees. 
+**Why the algorithm is called *decision tree*?**
+An analogy between a tree and a decision tree can help illustrate the concept of a decision tree. In a decision tree, you have a root node (analogous to the tree's trunk) that represents the initial decision point. From the root node, there are branches (analogous to the tree's branches) that lead to different decisions or choices. These branches are split based on specific conditions or features related to the data. As you move down the tree, you encounter more nodes and branches, much like the tree's branches and leaves. Ultimately, you reach the leaf nodes (analogous to the tree's leaves), which represent the final outcomes or decisions.
+---------------------------------------------------------------------------------------------
+### Basic terminologies of Decision trees: 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------
+from sklearn.tree import plot_tree,export_text
