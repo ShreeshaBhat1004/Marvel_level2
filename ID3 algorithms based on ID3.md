@@ -19,24 +19,17 @@ Decision trees are a popular machine learning algorithm used for both classifica
 
 6. **Gini Impurity:** A measure of impurity in a node. It quantifies the likelihood of misclassifying a randomly chosen element in the dataset if it were classified according to the class distribution in that node. It is used in classification problems.
 
-7. **Entropy:** A measure of impurity in a node, based on information theory. It quantifies the uncertainty or disorder in a node. Lower entropy indicates higher purity. It is also used in classification problems.
+7. **Information Gain:** The reduction in impurity achieved by splitting a node using a particular splitting criterion. Decision trees aim to maximize information gain when choosing the best feature for splitting.
 
-8. **Information Gain:** The reduction in impurity achieved by splitting a node using a particular splitting criterion. Decision trees aim to maximize information gain when choosing the best feature for splitting.
+8. **Pruning:** The process of reducing the size of a decision tree by removing branches (subtrees) that do not provide significant improvements in prediction. Pruning helps prevent overfitting.
 
-9. **CART (Classification and Regression Trees):** A popular algorithm for decision tree construction, which can be used for both classification and regression tasks. It uses Gini impurity for classification and mean squared error for regression.
+9. **Maximum Depth:** The maximum number of levels or nodes from the root node to a leaf node in the decision tree. It is a hyperparameter that can be used to control the tree's complexity.
 
-10. **Pruning:** The process of reducing the size of a decision tree by removing branches (subtrees) that do not provide significant improvements in prediction. Pruning helps prevent overfitting.
-
-11. **Overfitting:** A situation in which a decision tree model captures noise in the data rather than the underlying patterns, resulting in poor generalization to new, unseen data.
-
-12. **Underfitting:** When a decision tree is too simple to capture the underlying patterns in the data, leading to poor predictive performance.
-
-13. **Maximum Depth:** The maximum number of levels or nodes from the root node to a leaf node in the decision tree. It is a hyperparameter that can be used to control the tree's complexity.
-
-14. **Feature Importance:** A measure of the relevance or importance of each feature in the decision tree for making predictions. It helps identify which features have the most impact on the model's decisions.
+10. **Feature Importance:** A measure of the relevance or importance of each feature in the decision tree for making predictions. It helps identify which features have the most impact on the model's decisions.
 
 These are some of the fundamental terminologies associated with decision trees. Understanding these terms is essential when working with decision tree algorithms and interpreting the results of decision tree models.
 
+_______________________________________________________________________________________________________________________________________________________________________________________________________
 
 
 
