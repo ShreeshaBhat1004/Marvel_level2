@@ -32,6 +32,11 @@ These are some of the fundamental terminologies associated with decision trees. 
 ____________________________________________________________________________
 ### What's ID3(Iterative Dichotomiser 3)?
 Iterative dichotomiser is named such because it iteratively(repeatedly) dichotomises(divides) the dataset into two or more parts baseed on conditions. ID3 is an important algorithm for building Decision trees. It was developed by Ross Quinlan. 
+
+1. Calculate entropy for whole dataset
+2. Calculate entropy for each attribute
+3. Calculate infromation gain for each attribute
+4. 
 _______________________________________________________________________________________________________________________________________________________________________________
 
 
