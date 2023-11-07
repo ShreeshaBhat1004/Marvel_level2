@@ -52,6 +52,41 @@ The first thing we need would be our dataset:
 | Day 13 | Rain | Mild | High | Strong | No |
 | Day 14 | Sunny | Mild | High | strong | Yes | 
 
+We have the above data taken in 14 days, and based on various features of weather, if the person has played football or not. Using these features, we can predict weather the person will play football or not given the weather conditions of the future. We can predict it using decision trees. 
+
+As we know, a decision tree has a root node, internal nodes and then the leaf nodes. Now, how can we pick a root node to begin with. To find out which feature is going to be root node, we have to 
+- Calculate entropy and information gain for each feature and the feature with highest ig will be root node.
+- The entropy of the whole dataset will be
+I apologize for the oversight. If there are 9 "Yes" and 5 "No" instances in the dataset, let's recalculate the entropy:
+
+1. Number of "Yes" = 9
+2. Number of "No" = 5
+
+Now, calculate the probabilities:
+
+- \(p(Yes) = \frac{\text{Number of "Yes"}}{\text{Total number of samples}} = \frac{9}{14}\)
+- \(p(No) = \frac{\text{Number of "No"}}{\text{Total number of samples}} = \frac{5}{14}\)
+
+Now, calculate the entropy:
+
+\[Entropy(S) ≈ - (0.6429 * log2(0.6429)) - (0.3571 * log2(0.3571))\]
+
+Using base 2 logarithm:
+
+\[Entropy(S) ≈ - (0.6429 * (-0.6825)) - (0.3571 * (-1.5144))\]
+
+Now, calculate the values:
+
+\[Entropy(S) ≈ 0.4397 + 0.5420\]
+
+\[Entropy(S) ≈ 0.9817\]
+
+So, with 9 "Yes" and 5 "No" instances, the entropy for the entire dataset is approximately 0.9817.
+
+
+
+
+
 
 
 
