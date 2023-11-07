@@ -31,16 +31,26 @@ These are some of the fundamental terminologies associated with decision trees. 
 # One diagram that represents all the terms and also mathematical formula below the terms.
 ____________________________________________________________________________
 ### What's ID3(Iterative Dichotomiser 3)?
-Iterative dichotomiser is named such because it iteratively(repeatedly) dichotomises(divides) the dataset into two or more parts baseed on conditions. ID3 is an important algorithm for building Decision trees. It was developed by Ross Quinlan. 
-
-1. Calculate entropy for whole dataset
-2. Calculate entropy for each attribute
-3. Calculate infromation gain for each attribute
-4. 
-_______________________________________________________________________________________________________________________________________________________________________________
-
-
-
+ID3 is a machine learning algorithm used for building decision trees from a given dataset. It employs a top-down, recursive approach to partition the dataset into subsets, selecting the most informative attributes to split the data at each step. The goal of ID3 is to create a decision tree that can be used for classification by dividing the data into subsets that are as pure as possible in terms of the target class. The algorithm is based on information theory and uses entropy as a measure to select the best attributes for splitting the data.
+_____________________________________________________________________________________________________________________________________________________________
+### Example implementation of ID3 on a custom dataset: 
+The first thing we need would be our dataset: 
+| Day | Weather | Temperature | Humidity | Wind | Play Football? |
+|---|---|---|---|---|---|
+| Day 1 | Sunny | Hot | High | Weak | No |
+| Day 2 | Sunny | Hot | High | Strong | No |
+| Day 3 | Cloudy | Hot | High | Weak | Yes |
+| Day 4 | Rain | Mild | High | Weak | Yes |
+| Day 5 | Rain | Cool | Normal | Weak | Yes |
+| Day 6 | Rain | Cool | Normal | Strong | No |
+| Day 7 | Cloudy | Cool | Normal | Strong | Yes |
+| Day 8 | Sunny | Mild | High | Weak | No |
+| Day 9 | Sunny | Cool | Normal | Weak | Yes |
+| Day 10 | Rain | Mild | Normal | Weak | Yes |
+| Day 11 | Sunny | Mild | Normal | Strong | Yes |
+| Day 12 | Sunny | Hot | Normal | Strong | Yes |
+| Day 13 | Rain | Mild | High | Strong | No |
+| Day 14 | Sunny | Mild | High | strong | Yes | 
 
 
 
