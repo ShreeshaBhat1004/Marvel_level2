@@ -17,7 +17,7 @@ Decision trees are a popular machine learning algorithm used for both classifica
 
 5. **Splitting Criterion (or Splitting Rule):** The feature and value used to split the data at an internal node. The most common splitting criteria include Gini impurity, entropy, and mean squared error.
 
-6. **Gini Impurity:** A measure of impurity in a node. It quantifies the likelihood of misclassifying a randomly chosen element in the dataset if it were classified according to the class distribution in that node. It is used in classification problems.
+6. **Entropy:** A measure of impurity in a node. It quantifies the likelihood of misclassifying a randomly chosen element in the dataset if it were classified according to the class distribution in that node. It is used in classification problems.
 
 7. **Information Gain:** The reduction in impurity achieved by splitting a node using a particular splitting criterion. Decision trees aim to maximize information gain when choosing the best feature for splitting.
 
@@ -33,56 +33,7 @@ ____________________________________________________________________________
 ### What's ID3(Iterative Dichotomiser 3)?
 ID3 is a machine learning algorithm used for building decision trees from a given dataset. It employs a top-down, recursive approach to partition the dataset into subsets, selecting the most informative attributes to split the data at each step. The goal of ID3 is to create a decision tree that can be used for classification by dividing the data into subsets that are as pure as possible in terms of the target class. The algorithm is based on information theory and uses entropy as a measure to select the best attributes for splitting the data.
 _____________________________________________________________________________________________________________________________________________________________
-### Example implementation of ID3 on a custom dataset: 
-The first thing we need would be our dataset: 
-| Day | Weather | Temperature | Humidity | Wind | Play Football? |
-|---|---|---|---|---|---|
-| Day 1 | Sunny | Hot | High | Weak | No |
-| Day 2 | Sunny | Hot | High | Strong | No |
-| Day 3 | Cloudy | Hot | High | Weak | Yes |
-| Day 4 | Rain | Mild | High | Weak | Yes |
-| Day 5 | Rain | Cool | Normal | Weak | Yes |
-| Day 6 | Rain | Cool | Normal | Strong | No |
-| Day 7 | Cloudy | Cool | Normal | Strong | Yes |
-| Day 8 | Sunny | Mild | High | Weak | No |
-| Day 9 | Sunny | Cool | Normal | Weak | Yes |
-| Day 10 | Rain | Mild | Normal | Weak | Yes |
-| Day 11 | Sunny | Mild | Normal | Strong | Yes |
-| Day 12 | Sunny | Hot | Normal | Strong | Yes |
-| Day 13 | Rain | Mild | High | Strong | No |
-| Day 14 | Sunny | Mild | High | strong | Yes | 
-
-We have the above data taken in 14 days, and based on various features of weather, if the person has played football or not. Using these features, we can predict weather the person will play football or not given the weather conditions of the future. We can predict it using decision trees. 
-
-As we know, a decision tree has a root node, internal nodes and then the leaf nodes. Now, how can we pick a root node to begin with. To find out which feature is going to be root node, we have to 
-- Calculate entropy and information gain for each feature and the feature with highest ig will be root node.
-- The entropy of the whole dataset will be
-I apologize for the oversight. If there are 9 "Yes" and 5 "No" instances in the dataset, let's recalculate the entropy:
-
-1. Number of "Yes" = 9
-2. Number of "No" = 5
-
-Now, calculate the probabilities:
-
-- \(p(Yes) = \frac{\text{Number of "Yes"}}{\text{Total number of samples}} = \frac{9}{14}\)
-- \(p(No) = \frac{\text{Number of "No"}}{\text{Total number of samples}} = \frac{5}{14}\)
-
-Now, calculate the entropy:
-
-\[Entropy(S) ≈ - (0.6429 * log2(0.6429)) - (0.3571 * log2(0.3571))\]
-
-Using base 2 logarithm:
-
-\[Entropy(S) ≈ - (0.6429 * (-0.6825)) - (0.3571 * (-1.5144))\]
-
-Now, calculate the values:
-
-\[Entropy(S) ≈ 0.4397 + 0.5420\]
-
-\[Entropy(S) ≈ 0.9817\]
-
-So, with 9 "Yes" and 5 "No" instances, the entropy for the entire dataset is approximately 0.9817.
-
+### Implementation of ID3 algorithm 
 
 
 
