@@ -295,11 +295,3 @@ accuracy = evaluate(tree, test_data_m, 'Play Tennis') #evaluating the test datas
 
 
 
-
-
-
-
-
-
-----------------------------------------------------------------------------------------------
-from sklearn.tree import plot_tree,export_text
