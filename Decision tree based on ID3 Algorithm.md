@@ -28,7 +28,6 @@ Decision trees are a popular machine learning algorithm used for both classifica
 10. **Feature Importance:** A measure of the relevance or importance of each feature in the decision tree for making predictions. It helps identify which features have the most impact on the model's decisions.
 
 These are some of the fundamental terminologies associated with decision trees. Understanding these terms is essential when working with decision tree algorithms and interpreting the results of decision tree models.
-# One diagram that represents all the terms and also mathematical formula below the terms.
 ____________________________________________________________________________
 ### What's ID3(Iterative Dichotomiser 3)?
 ID3 is a machine learning algorithm used for building decision trees from a given dataset. It employs a top-down, recursive approach to partition the dataset into subsets, selecting the most informative attributes to split the data at each step. The goal of ID3 is to create a decision tree that can be used for classification by dividing the data into subsets that are as pure as possible in terms of the target class. The algorithm is based on information theory and uses entropy as a measure to select the best attributes for splitting the data.
