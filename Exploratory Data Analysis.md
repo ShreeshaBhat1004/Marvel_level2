@@ -27,23 +27,23 @@ nyc_df.info()
 ```
 RangeIndex: 48895 entries, 0 to 48894
 Data columns (total 16 columns):
-    Column                          Non-Null Count  Dtype                          
- 0   id                              48895 non-null  int64  
- 1   name                            48879 non-null  object 
- 2   host_id                         48895 non-null  int64  
- 3   host_name                       48874 non-null  object 
- 4   neighbourhood_group             48895 non-null  object 
- 5   neighbourhood                   48895 non-null  object 
- 6   latitude                        48895 non-null  float64
- 7   longitude                       48895 non-null  float64
- 8   room_type                       48895 non-null  object 
- 9   price                           48895 non-null  int64  
- 10  minimum_nights                  48895 non-null  int64  
- 11  number_of_reviews               48895 non-null  int64  
- 12  last_review                     38843 non-null  object 
- 13  reviews_per_month               38843 non-null  float64
- 14  calculated_host_listings_count  48895 non-null  int64  
- 15  availability_365                48895 non-null  int64  
+    Column                          Non-Null Count  Dtype    \n                      
+ 0   id                              48895 non-null  int64   \n
+ 1   name                            48879 non-null  object  \n
+ 2   host_id                         48895 non-null  int64   \n
+ 3   host_name                       48874 non-null  object  \n
+ 4   neighbourhood_group             48895 non-null  object  \n
+ 5   neighbourhood                   48895 non-null  object  \n
+ 6   latitude                        48895 non-null  float64 \n
+ 7   longitude                       48895 non-null  float64 \n
+ 8   room_type                       48895 non-null  object  \n
+ 9   price                           48895 non-null  int64   \n
+ 10  minimum_nights                  48895 non-null  int64   \n
+ 11  number_of_reviews               48895 non-null  int64   \n
+ 12  last_review                     38843 non-null  object  \n
+ 13  reviews_per_month               38843 non-null  float64 \n
+ 14  calculated_host_listings_count  48895 non-null  int64   \n
+ 15  availability_365                48895 non-null  int64   \n
 dtypes: float64(3), int64(7), object(6)
 
 We get to know that there are 15 features, out of which 4 have missing values, those are host_name,name,last_review,reviews_per_month. Also the id feature is useless here. So we drop these 4 features from our dataset. 
