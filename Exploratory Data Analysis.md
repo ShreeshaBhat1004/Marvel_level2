@@ -27,8 +27,7 @@ nyc_df.info()
 ```
 RangeIndex: 48895 entries, 0 to 48894
 Data columns (total 16 columns):
- #   Column                          Non-Null Count  Dtype  
----  ------                          --------------  -----  
+    Column                          Non-Null Count  Dtype                          
  0   id                              48895 non-null  int64  
  1   name                            48879 non-null  object 
  2   host_id                         48895 non-null  int64  
