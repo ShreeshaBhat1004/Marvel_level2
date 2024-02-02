@@ -1,1 +1,12 @@
+## Ensemble techniques
+Ensemble techniques are used to generate outputs with greater accuracy by stacking multiple models 
+and taking out weighted mean, majority voting or training another model through obtained results. 
 
+To clearly understand whats the need for ensemble techniques we can go back to the task 1, which was 
+regarding decision trees. In it we try to decide whether the boy will play or not by analysing the 
+whether. He plays everytime its overcast
+
+# Types
+
+
+# Clear Implementation
