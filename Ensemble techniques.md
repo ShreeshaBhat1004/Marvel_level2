@@ -19,6 +19,8 @@ regarding decision trees.
 | Sunny | Mild | Overcast | Mild | High | Yes |
 | Overcast | Hot | Normal | Yes | No |
 | Rain | Mild | High | Strong | No |
+
+
 In it we try to decide whether the boy will play or not by analysing the 
 whether. He plays everytime its overcast,if its raining, we must ask whether its windy or not,
 if windy he wont play. When making a decision tree several factors we must take into consideration:
