@@ -69,7 +69,46 @@ Train individual models: Train a base model (e.g., a decision tree) on each of t
 Aggregation: When making predictions on new data, take the predictions of each individual model and combine them. This is typically done using a majority vote (for classification) or by averaging (for regression).
 
 #### Implementation
+We first import all neccessary libraries, load the dataset and split it as X and y that means, all the feature columns as x and our target as y
+```python
+import pandas as pd
+from sklearn.datasets import load_breast_cancer # Our dataset
+from sklearn.model_selection import train_test_split 
+from sklearn.ensemble import BaggingClassifier # Model 1
+from sklearn.tree import DecisionTreeClassifier # Model 2
+from sklearn.metrics import accuracy_score # Model 3
 
+# Sample dataset: Breast cancer classification
+data = load_breast_cancer()
+X = data.data
+y = data.target
+
+# Split data 
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=10) 
+```
+If we just use a decision tree, what's the accuracy
+```python
+# A single decision tree as our comparison point
+tree = DecisionTreeClassifier()
+tree.fit(X_train, y_train)
+y_pred = tree.predict(X_test)
+
+print("Accuracy of single decision tree:", accuracy_score(y_test, y_pred))
+```
+Now we use bagging ensemble technique and calculate the efficiency
+```python
+# Base estimator still a decision tree (but with high flexibility for bagging's sake)
+base_estimator = DecisionTreeClassifier(max_depth=None)
+
+# Create the ensemble
+ensemble = BaggingClassifier(base_estimator=base_estimator, n_estimators=100, random_state=10)
+
+# Fit the ensemble model 
+ensemble.fit(X_train, y_train)
+y_pred_ensemble = ensemble.predict(X_test)
+
+print("Accuracy of Bagging ensemble: ", accuracy_score(y_test, y_pred_ensemble))
+```
 ### Boosting
 Boosting is an ensemble technique that seeks to reduce bias and improve the accuracy of weak learners by creating a sequence of models where each one learns from the mistakes of the previous one.
 
@@ -81,3 +120,43 @@ Train the next model: Now, a new model is trained while paying extra attention t
 Repeat and combine: This process repeats, each time creating a new model that tries to fix the shortcomings of the ensemble so far. Finally, the predictions from all models are combined, usually with a weighted scheme where better-performing models get more say in the final outcome.
 
 #### Implementation
+Loading the dataset
+```python
+import numpy as np
+from sklearn.datasets import load_iris 
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Split data 
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+```
+```python
+# Base weak learner (Decision Tree)
+dt_base = DecisionTreeClassifier(max_depth=1)  # Simple tree, weak learner
+
+# AdaBoost ensemble
+boost = AdaBoostClassifier(base_estimator=dt_base, n_estimators=50) 
+boost.fit(X_train, y_train)
+
+# Predictions and accuracy
+y_pred_boost = boost.predict(X_test)
+accuracy_boost = accuracy_score(y_test, y_pred_boost)
+
+# Single decision tree for comparison
+dt_single = DecisionTreeClassifier(max_depth=1)
+dt_single.fit(X_train, y_train)
+y_pred_single = dt_single.predict(X_test)
+accuracy_single = accuracy_score(y_test, y_pred_single)
+
+print("Accuracy of single decision tree:", accuracy_single)
+```
+```python
+print("Accuracy of boosted ensemble:", accuracy_boost)
+```
