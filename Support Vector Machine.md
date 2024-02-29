@@ -28,3 +28,31 @@ When are SVMs Used?
 Classification: A classic use case (e.g., email spam filtering, image classification).
 Regression: SVM variants exist for predicting continuous values.
 Outlier Detection: Data points far from the margins could be anomalies
+```python
+import pandas as pd
+from sklearn import svm
+from sklearn.datasets import load_iris 
+from sklearn.model_selection import train_test_split
+
+# 1. Load the Iris dataset
+iris = load_iris()
+X = iris.data  
+y = iris.target 
+
+# 2. Split into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# 3. Create an SVM classifier (linear kernel for simplicity)
+model = svm.SVC(kernel='linear')  
+
+# 4. Train the model
+model.fit(X_train, y_train)
+
+# 5. Make predictions on the test set
+predictions = model.predict(X_test)
+
+# 6. Evaluate accuracy
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(y_test, predictions)
+print("Accuracy:", accuracy) 
+```
