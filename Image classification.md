@@ -42,3 +42,30 @@ Sensitive to outliers: Outliers can significantly affect cluster formation.
 **Image Compression:** Decrease the number of colors in images by clustering pixels.
 **Document Clustering**: Organize documents based on topic similarity.
 **Anomaly Detection:** Identify unusual data points that don't fit into well-defined clusters.
+```python
+import numpy as np
+from sklearn.datasets import fetch_openml
+
+mnist = fetch_openml('mnist_784') 
+X = mnist.data  # Images as feature vectors
+y = mnist.target  # True image labels
+```
+```python
+from sklearn.cluster import KMeans
+
+num_clusters = 10  # Since MNIST has digits 0-9
+kmeans = KMeans(n_clusters=num_clusters)
+kmeans.fit(X)  
+```
+```python
+# ... previous steps ...
+
+y_pred = kmeans.labels_  # Cluster assignments
+
+# You might analyze clusters like this:
+from collections import Counter
+for cluster_id in range(num_clusters):
+    print("Cluster", cluster_id)
+    print("Dominant labels:", Counter(y[y_pred == cluster_id]).most_common(3))
+```
+
