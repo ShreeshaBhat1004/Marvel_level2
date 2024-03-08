@@ -46,6 +46,63 @@ Here are some examples of common hyperparameters:
 - Mini-batch size is training data batch size
 - Epochs is the number of times the entire training dataset is shown to the network during training
 - Eta is step size shrinkage to prevent overfitting
+```
+┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
+       │                                       Hyperparameter Tuning                                       │
+       └────────────────────────────────────────────────┬────────────────────────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │      Model Architecture    │
+                                          │   (e.g., Neural Network)   │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │     Hyperparameter Space   │
+                                          │   (e.g., learning rate,    │
+                                          │    hidden units, etc.)     │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │  Hyperparameter Selection  │
+                                          │     (e.g., Grid Search,    │
+                                          │     Random Search, etc.)   │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │   Training and Evaluation  │
+                                          │     (e.g., Cross-Validation)     │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │    Performance Metrics     │
+                                          │   (e.g., Accuracy, RMSE,   │
+                                          │         F1 Score, etc.)    │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │   Hyperparameter Selection │
+                                          │    (Best Performing Set)   │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                               ┌───────────────┐
+                                               │    Optimal    │
+                                               │     Model     │
+                                               └───────────────┘
+```
 #### Implementation:
 ``` python
 import pandas as pd
