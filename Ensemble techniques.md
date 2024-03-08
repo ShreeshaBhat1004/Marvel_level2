@@ -60,6 +60,8 @@ ensemble.fit(X_train, y_train)
 # Use the ensemble for predictions on new data
 y_pred = ensemble.predict(X_test)
 ```
+![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/ebab91ca-c99c-4f62-874c-c101d4a8b9a6)
+
 ### Bagging: 
 Bagging is an ensemble learning technique designed to reduce the variance of a machine learning model, making it less prone to overfitting. Here's how it works:
 
