@@ -216,6 +216,48 @@ print("Accuracy:", accuracy)
 ![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/6cc3cb35-b4c7-4c3d-947e-33df6b54401e)
 
 # **GBM: The Ensemble Maestro**
+```
+┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
+       │                                         Gradient Boosting                                         │
+       └────────────────────────────────────────────────┬────────────────────────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │      Initial Prediction    │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │  Calculate Pseudo-Residuals│
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │  Fit a Base Learner (Tree) │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │  Update Predictions        │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │  Repeat for M Iterations   │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                               ┌───────────────┐
+                                               │     Final     │
+                                               │   Prediction  │
+                                               └───────────────┘
+```
 
 Gradient Boosting Machines belong to a powerful class of machine learning algorithms that combine multiple weak learners (usually decision trees) into a stronger overall model. Here's the core idea:
 
