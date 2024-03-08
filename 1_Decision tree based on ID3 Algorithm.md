@@ -1,4 +1,6 @@
 # Decision tree based ID3 Algorithm
+![Decision_tree_algorithm_is_a_branch_of_Machine_l](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/d45ccd36-9ee2-41f9-8905-fa99c5249313)
+
 **Decision tree** algorithm is a branch of Machine learning, it is a recursive algorithm which traverses a dataset by keeping a root node and moving onto its branches or child nodes by only considering non-traversed nodes.We can perform regression(numerical prediction) tasks as well as Classification(yes or no prediction) tasks using Decision trees. 
 
 **Why the algorithm is called *decision tree*?**
