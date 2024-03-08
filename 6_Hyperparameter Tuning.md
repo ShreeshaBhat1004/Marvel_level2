@@ -47,9 +47,9 @@ Here are some examples of common hyperparameters:
 - Epochs is the number of times the entire training dataset is shown to the network during training
 - Eta is step size shrinkage to prevent overfitting
 ```
-┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
+       ┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
        │                                       Hyperparameter Tuning                                       │
-       └────────────────────────────────────────────────┬────────────────────────────────────────────────┘
+        └────────────────────────────────────────────────┬────────────────────────────────────────────────┘
                                                         │
                                                         │
                                                         ▼
