@@ -43,6 +43,71 @@ Now we are ready to classify if a message is spam or normal considering that our
 We can see that
 $a > b$\
 Hence, the message "*Dear friend*" is most probably a normal message. This is how **Naive Bayesian classifier** works. 
+```
+       ┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
+        │                                 Naive Bayes Classifier Example                                   │
+        └────────────────────────────────────────────────┬────────────────────────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │        Dataset: Emails     │
+                                          │   12 emails (8 normal, 4 spam)   │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │      Word Frequencies      │
+                                          │  Normal:                   │
+                                          │    Friend - 8, Dear - 5,   │
+                                          │    Lunch - 3, Money - 1    │
+                                          │  Spam:                     │
+                                          │    Friend - 1, Dear - 2,   │
+                                          │    Lunch - 0, Money - 4    │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │  Conditional Probabilities │
+                                          │  Normal:                   │
+                                          │    p(Dear|N) = 0.47        │
+                                          │    p(Friend|N) = 0.29      │
+                                          │    p(Lunch|N) = 0.18       │
+                                          │    p(Money|N) = 0.06       │
+                                          │  Spam:                     │
+                                          │    p(Dear|S) = 0.29        │
+                                          │    p(Friend|S) = 0.14      │
+                                          │    p(Lunch|S) = 0.00       │
+                                          │    p(Money|S) = 0.57       │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │        Class Priors        │
+                                          │    p(N) = 0.67             │
+                                          │    p(S) = 0.33             │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │     Message: "Dear Friend" │
+                                          │  a = p(N) * p(Dear|N) * p(Friend|N) = 0.09 │
+                                          │  b = p(S) * p(Dear|S) * p(Friend|S) = 0.01 │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                               ┌───────────────┐
+                                               │    a > b      │
+                                               │ "Dear Friend" │
+                                               │  is a normal  │
+                                               │    message    │
+                                               └───────────────┘
+```
 ### Code Implementation
 ```python
 import pandas as pd
@@ -79,3 +144,4 @@ predictions = model.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, predictions))
 print("Confusion Matrix:\n", confusion_matrix(y_test, predictions))
 ```
+![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/c0bfc661-0bb7-4571-89d1-757d16f5c7c5)
