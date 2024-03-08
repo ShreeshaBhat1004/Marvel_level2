@@ -113,6 +113,8 @@ y_pred_ensemble = ensemble.predict(X_test)
 
 print("Accuracy of Bagging ensemble: ", accuracy_score(y_test, y_pred_ensemble))
 ```
+![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/19ff0955-3874-4c3b-b24a-07ae22ccfddd)
+
 ### Boosting
 Boosting is an ensemble technique that seeks to reduce bias and improve the accuracy of weak learners by creating a sequence of models where each one learns from the mistakes of the previous one.
 
