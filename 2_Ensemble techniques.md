@@ -104,7 +104,46 @@ Bagging is an ensemble learning technique designed to reduce the variance of a m
 Bootstrapping: Create multiple different subsets of your original training data by sampling with replacement. This means some data points might be included in a subset multiple times, while others won't appear at all.
 Train individual models: Train a base model (e.g., a decision tree) on each of these bootstrapped subsets. This forces each model to specialize on different aspects of the data distribution.
 Aggregation: When making predictions on new data, take the predictions of each individual model and combine them. This is typically done using a majority vote (for classification) or by averaging (for regression).
-
+```
+                               ┌───────────────────────────────────────────────┐
+                               │                Final Prediction               │
+                               │      (Aggregation of Base Model Predictions)  │
+                               └───────────────────────┬───────────────────────┘
+                                                       │
+                                                       │
+       ┌───────────────────────────────────────────────┴───────────────────────────────────────────┐
+       │                                               │                                           │
+       │                                               │                                           │
+┌──────┴──────┐                                 ┌──────┴──────┐                             ┌──────┴──────┐
+│ Base Model 1│                                 │ Base Model 2│                             │ Base Model m│
+└─────────────┘                                 └─────────────┘                             └─────────────┘
+       │                                               │                                           │
+       │                                               │                                           │
+       │                                               │                                           │
+       ▼                                               ▼                                           ▼
+┌──────────────┐                               ┌──────────────┐                             ┌──────────────┐
+│  Bootstrap   │                               │  Bootstrap   │                             │  Bootstrap   │
+│  Sample 1    │                               │  Sample 2    │                             │  Sample m    │
+└──────────────┘                               └──────────────┘                             └──────────────┘
+       │                                               │                                           │
+       │                                               │                                           │
+       │                                               │                                           │
+       ▼                                               ▼                                           ▼
+┌──────────────┐                               ┌──────────────┐                             ┌──────────────┐
+│ Prediction 1 │                               │ Prediction 2 │                             │ Prediction m │
+└──────────────┘                               └──────────────┘                             └──────────────┘
+       │                                               │                                           │
+       │                                               │                                           │
+       └───────────────────────────────────────────────┴───────────────────────────────────────────┘
+                                                       │
+                                                       │
+                                                       ▼
+                                                ┌──────────────┐
+                                                │   Average/   │
+                                                │   Majority   │
+                                                │    Vote      │
+                                                └──────────────┘
+```
 #### Implementation
 We first import all neccessary libraries, load the dataset and split it as X and y that means, all the feature columns as x and our target as y
 ```python
