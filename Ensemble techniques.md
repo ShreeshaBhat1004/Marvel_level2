@@ -97,6 +97,8 @@ y_pred = tree.predict(X_test)
 
 print("Accuracy of single decision tree:", accuracy_score(y_test, y_pred))
 ```
+![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/2cdad622-6aae-4c4e-882a-18f156952276)
+
 Now we use bagging ensemble technique and calculate the efficiency
 ```python
 # Base estimator still a decision tree (but with high flexibility for bagging's sake)
