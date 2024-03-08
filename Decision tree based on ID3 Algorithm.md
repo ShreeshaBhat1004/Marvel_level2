@@ -291,6 +291,8 @@ test_data_m = pd.read_csv("test\PlayTennis.csv") #importing test dataset into da
 accuracy = evaluate(tree, test_data_m, 'Play Tennis') #evaluating the test dataset
 
 ```
+![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/f7cce964-8245-4167-86a4-9a1e0b129a3c)
 
+Since this is relatively a small dataset, we achieved an accuracy of 1, that is 100%
 
 
