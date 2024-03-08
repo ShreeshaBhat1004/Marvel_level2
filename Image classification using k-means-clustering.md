@@ -15,7 +15,6 @@ Centroid Update:
 The centroid of each cluster is recalculated by taking the average (mean) of all the data points assigned to that cluster.
 **Repeat:**
 Go back to step 2 and reassign the data points based on the new centroids. Then, update the centroids again. This process repeats until there's minimal change in cluster assignments or a set number of iterations is reached.
-**Visual Example**
 
 Imagine you have a dataset of customer information, and you want to discover customer segments. Here's how K-means might approach it:
 
