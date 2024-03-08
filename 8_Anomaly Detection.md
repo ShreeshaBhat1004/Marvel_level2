@@ -37,14 +37,24 @@ print(anomalies)
 ![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/a33951b0-1909-49b9-8095-590b7c5c56c4)
 
 ```mermaid
-graph TD
-    A[Input Data] --> B{Preprocessing}
-    B --> C{Feature Extraction}
-    C --> D{Model Training}
-    D --> E{Anomaly Scoring}
-    E --> F{Threshold Selection}
-    F --> G{Anomaly Detection}
-    G --> H{Normal Data}
-    G --> I{Anomalous Data}
+scatter
+    title Anomaly Detection
+    x[Feature X] y[Feature Y]
+    Normal_Data_Point_1(2, 3)
+    Normal_Data_Point_2(3, 4)
+    Normal_Data_Point_3(4, 5)
+    Normal_Data_Point_4(5, 6)
+    Normal_Data_Point_5(6, 7)
+    Normal_Data_Point_6(7, 8)
+    Normal_Data_Point_7(8, 9)
+    Normal_Data_Point_8(9, 10)
+    Normal_Data_Point_9(10, 11)
+    Anomaly_1(12, 5)
+    Anomaly_2(4, 12)
+    Anomaly_3(8, 3)
+    Decision_Boundary(6, 5)
+    Decision_Boundary(6, 7)
+    Decision_Boundary(8, 7)
+    Decision_Boundary(8, 5)
 ```
 
