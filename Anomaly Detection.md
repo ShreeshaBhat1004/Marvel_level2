@@ -8,53 +8,32 @@ An anomaly can be broadly categorized into three categories – \n
 
 Anomaly detection can be done using the concepts of Machine Learning. It can be done in the following ways –\n
 
-**Supervised Anomaly Detection:** This method requires a labeled dataset containing both normal and anomalous samples to construct a predictive model to classify future data points. The most commonly used algorithms for this purpose are supervised Neural Networks, Support Vector Machine learning, K-Nearest Neighbors Classifier, etc.\n
-**Unsupervised Anomaly Detection:** This method does require any training data and instead assumes two things about the data ie Only a small percentage of data is anomalous and Any anomaly is statistically different from the normal samples. Based on the above assumptions, the data is then clustered using a similarity measure and the data points which are far off from the cluster are considered to be anomalies.
-Step 1: Importing the required libraries\n
+##### **Supervised Anomaly Detection:**
+This method requires a labeled dataset containing both normal and anomalous samples to construct a predictive model to classify future data points. The most commonly used algorithms for this purpose are supervised Neural Networks, Support Vector Machine learning, K-Nearest Neighbors Classifier, etc.
+#####**Unsupervised Anomaly Detection:**
+This method does require any training data and instead assumes two things about the data ie Only a small percentage of data is anomalous and Any anomaly is statistically different from the normal samples. Based on the above assumptions, the data is then clustered using a similarity measure and the data points which are far off from the cluster are considered to be anomalies.
 
-```Python3
-import numpy as np 
-from scipy import stats 
-import matplotlib.pyplot as plt 
-import matplotlib.font_manager 
-from pyod.models.knn import KNN  
-from pyod.utils.data import generate_data, get_outliers_inliers
-```
-Step 2: Creating the synthetic data
- 
+#### Implementation:
+```python
+import pandas as pd
+from sklearn.ensemble import IsolationForest
 
-```Python3
-# generating a random dataset with two features 
-X_train, y_train = generate_data(n_train = 300, train_only = True, 
-                                                   n_features = 2) 
-  
-# Setting the percentage of outliers 
-outlier_fraction = 0.1
-  
-# Storing the outliers and inliners in different numpy arrays 
-X_outliers, X_inliers = get_outliers_inliers(X_train, y_train) 
-n_inliers = len(X_inliers) 
-n_outliers = len(X_outliers) 
-  
-# Separating the two features 
-f1 = X_train[:, [0]].reshape(-1, 1) 
-f2 = X_train[:, [1]].reshape(-1, 1)
-```
-Step 3: Training and evaluating the model
- 
+# Load your dataset (replace 'your_data.csv')
+data = pd.read_csv('/content/sample_data/Anomaly Detection_1/annthyroid_21feat_normalised.csv')
 
-```Python3
-# Training the classifier 
-clf = KNN(contamination = outlier_fraction) 
-clf.fit(X_train, y_train) 
-  
-# You can print this to see all the prediction scores 
-scores_pred = clf.decision_function(X_train)*-1
-  
-y_pred = clf.predict(X_train) 
-n_errors = (y_pred != y_train).sum() 
-# Counting the number of errors 
-  
-print('The number of prediction errors are ' + str(n_errors)) 
+# Create an Isolation Forest model
+model = IsolationForest(contamination=0.05)  # Assume 5% of data points are anomalies
+
+# Fit the model to your data
+model.fit(data)
+
+# Get anomaly scores (-1 is normal, 1 is an outlier)
+anomaly_scores = model.decision_function(data) 
+
+# Identify anomalies (adjust threshold as needed)
+anomalies = data[anomaly_scores > 0.17] # We declare that datapoints that are above 1.7 are anomalies
+print(anomalies)
 ```
+![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/a33951b0-1909-49b9-8095-590b7c5c56c4)
+
 
