@@ -76,7 +76,7 @@ from sklearn.datasets import load_breast_cancer # Our dataset
 from sklearn.model_selection import train_test_split 
 from sklearn.ensemble import BaggingClassifier # Model 1
 from sklearn.tree import DecisionTreeClassifier # Model 2
-from sklearn.metrics import accuracy_score # Model 3
+from sklearn.metrics import accuracy_score 
 
 # Sample dataset: Breast cancer classification
 data = load_breast_cancer()
