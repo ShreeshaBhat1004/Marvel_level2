@@ -163,6 +163,8 @@ accuracy_single = accuracy_score(y_test, y_pred_single)
 
 print("Accuracy of single decision tree:", accuracy_single)
 ```
+![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/25440d10-2903-4ebb-a8ee-9f18849796db)
+
 ```python
 print("Accuracy of boosted ensemble:", accuracy_boost)
 ```
