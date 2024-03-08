@@ -61,3 +61,4 @@ from sklearn.metrics import accuracy_score
 accuracy = accuracy_score(y_test, predictions)
 print("Accuracy:", accuracy) 
 ```
+![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/ccd04f50-d789-40ab-b2bc-74836c64f2a0)
