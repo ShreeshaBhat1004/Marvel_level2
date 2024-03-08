@@ -2,7 +2,48 @@
 - Random forest technique is one of the ensemble techniques where we use multiple decision trees for predicting
 - Many decision trees are trained on different portions of data.
 - When you need to predict, the input falls into each of the decision trees and the final prediction is based on majority voting or mean of all the decisions.
-
+```
+                               ┌───────────────────────────────────────────────┐
+                               │                 Random Forest                 │
+                               └───────────────────────┬───────────────────────┘
+                                                       │
+                                                       │
+       ┌───────────────────────────────────────────────┴───────────────────────────────────────────┐
+       │                                               │                                           │
+       │                                               │                                           │
+┌──────┴──────┐                                 ┌──────┴──────┐                             ┌──────┴──────┐
+│ Decision    │                                 │ Decision    │                             │ Decision    │
+│ Tree 1      │                                 │ Tree 2      │                             │ Tree m      │
+└─────────────┘                                 └─────────────┘                             └─────────────┘
+       │                                               │                                           │
+       │                                               │                                           │
+       │                                               │                                           │
+       ▼                                               ▼                                           ▼
+┌──────────────┐                               ┌──────────────┐                             ┌──────────────┐
+│  Bootstrap   │                               │  Bootstrap   │                             │  Bootstrap   │
+│  Sample 1    │                               │  Sample 2    │                             │  Sample m    │
+└──────────────┘                               └──────────────┘                             └──────────────┘
+       │                                               │                                           │
+       │                                               │                                           │
+       │                                               │                                           │
+       ▼                                               ▼                                           ▼
+┌──────────────┐                               ┌──────────────┐                             ┌──────────────┐
+│  Random      │                               │  Random      │                             │  Random      │
+│  Feature     │                               │  Feature     │                             │  Feature     │
+│  Subset 1    │                               │  Subset 2    │                             │  Subset m    │
+└──────────────┘                               └──────────────┘                             └──────────────┘
+       │                                               │                                           │
+       │                                               │                                           │
+       └───────────────────────────────────────────────┴───────────────────────────────────────────┘
+                                                       │
+                                                       │
+                                                       ▼
+                                                ┌──────────────┐
+                                                │   Majority   │
+                                                │    Vote/     │
+                                                │   Average    │
+                                                └──────────────┘
+```
 ## Steps to create a random forest:
 Loading the dataset and importing libraries
 ```python
@@ -75,8 +116,42 @@ You're absolutely right! I apologize for the misunderstanding. Here's a revised 
 * **E-commerce:** Product recommendations, fraud detection 
 * **Healthcare:** Disease prediction and diagnosis 
 * **Advertising:** Click-through rate prediction 
-
-**Let me know if you have any other formatting requirements or if you'd like examples of how this Markdown code would appear when rendered!** 
+```
+       ┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
+       │                                              XGBoost                                              │
+       └────────────────────────────────────────────────┬────────────────────────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │       Tree Ensemble        │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │      Gradient Boosting     │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │     Regularization Term    │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │      Loss Optimization     │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                               ┌───────────────┐
+                                               │     Final     │
+                                               │   Prediction  │
+                                               └───────────────┘
+```
 
 #### implementation
 Absolutely! Here's a simple implementation of XGBoost using Python and the scikit-learn library. We'll focus on a classification task, but the process is very similar for regression.
