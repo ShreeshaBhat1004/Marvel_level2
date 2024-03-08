@@ -68,4 +68,5 @@ for cluster_id in range(num_clusters):
     print("Cluster", cluster_id)
     print("Dominant labels:", Counter(y[y_pred == cluster_id]).most_common(3))
 ```
+![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/f4401b2e-9271-4b65-8582-337ce13712e2)
 
