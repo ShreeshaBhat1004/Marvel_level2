@@ -29,11 +29,14 @@ rf_model.fit(X_train, y_train)
 # Make predictions on the test set
 predictions = rf_model.predict(X_test)
 ```
+
 ```python
 # Evaluate (a simple example)
 accuracy = rf_model.score(X_test, y_test) 
 print("Accuracy:", accuracy) 
 ```
+![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/9b73b884-e0dd-4bf1-80bf-b14e6e9941f1)
+
 # XgBoost:
 You're absolutely right! I apologize for the misunderstanding. Here's a revised version that adheres more closely to standard Markdown formatting:
 
