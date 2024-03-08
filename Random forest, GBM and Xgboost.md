@@ -138,35 +138,7 @@ from sklearn.metrics import accuracy_score
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 ```
-**Complete Code Example**
-
-```python
-from sklearn import datasets
-from sklearn.model_selection import train_test_split
-from xgboost import XGBClassifier
-from sklearn.metrics import accuracy_score
-
-# Load data
-iris = datasets.load_iris()
-X = iris.data 
-y = iris.target
-
-# Split into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Create the model
-model = XGBClassifier()
-
-# Train the model
-model.fit(X_train, y_train)
-
-# Make predictions
-y_pred = model.predict(X_test)
-
-# Evaluate performance
-accuracy = accuracy_score(y_test, y_pred)
-print("Accuracy:", accuracy) 
-```
+![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/6cc3cb35-b4c7-4c3d-947e-33df6b54401e)
 
 # **GBM: The Ensemble Maestro**
 
