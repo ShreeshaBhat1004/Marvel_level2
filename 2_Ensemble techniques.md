@@ -15,7 +15,8 @@ Stacking, an ensemble method, is often referred to as stacked generalization. Th
 Make predictions on new data: Get each of your trained models to predict on a new set of data points (not the ones they trained on).
 Train the super-learner: Now you create a new dataset where the features are the predictions from those first models, and the target is still what you're actually trying to predict. You train a final model (any kind you want!) on this special dataset.
 Predict!: When faced with completely new data, you first get predictions from all your initial models, then feed those predictions into the super-learner model for the ultimate decision.
-┌─────────────────────────────────────────┐
+```
+                              ┌─────────────────────────────────────────┐
                                │               Final Model               │
                                │            (Meta-level Model)           │
                                │   ┌────────────────────────────────────┐ │
@@ -49,6 +50,7 @@ Predict!: When faced with completely new data, you first get predictions from al
                                           │    Stacked   │
                                           │  Predictions │
                                           └──────────────┘
+```
 #### Implementation
 We import neccessary libraries
 ```python
