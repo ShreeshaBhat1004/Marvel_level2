@@ -198,6 +198,44 @@ Start with a weak learner: A weak learner is a model that performs slightly bett
 Train and focus on mistakes: Train the first model on the dataset. The data points that were misclassified get more weight (become more important) for the next model.
 Train the next model: Now, a new model is trained while paying extra attention to the examples the previous model got wrong. This forces the new model to focus on those hard-to-classify cases.
 Repeat and combine: This process repeats, each time creating a new model that tries to fix the shortcomings of the ensemble so far. Finally, the predictions from all models are combined, usually with a weighted scheme where better-performing models get more say in the final outcome.
+```
+┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
+       │                                            Final Model                                            │
+       │                              (Weighted Combination of Weak Learners)                              │
+       └────────────────────────────────────────────────┬────────────────────────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │       Weak Learner 1       │
+                                          │      (e.g., Decision Stump)│
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │       Weak Learner 2       │
+                                          │      (e.g., Decision Stump)│
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                                       ...
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │       Weak Learner m       │
+                                          │      (e.g., Decision Stump)│
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                               ┌───────────────┐
+                                               │   Weighted    │
+                                               │  Combination  │
+                                               └───────────────┘
+  ```
 
 #### Implementation
 Loading the dataset
