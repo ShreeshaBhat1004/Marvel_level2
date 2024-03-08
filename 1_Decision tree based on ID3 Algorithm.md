@@ -1,6 +1,6 @@
 # Decision tree based ID3 Algorithm
 ```
-┌─────────────────────────┐
+          ┌─────────────────────────┐
           │         Root Node       │
           │      (Decision Point)   │
           └────────────┬────────────┘
