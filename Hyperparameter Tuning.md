@@ -54,11 +54,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 
 # 1. Load your dataset (replace with your file)
-data = pd.read_csv("customer_churn.csv") 
+data = pd.read_csv("/content/customer_churn.csv") 
 
 # 2.  Separate features (X) and target variable (y)
-X = data.drop('churn', axis=1)
-y = data['churn']
+X = data.drop(['Churn','Names','Company','Onboard_date','Location'], axis=1)
+y = data['Churn']
 
 # 3. Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) 
