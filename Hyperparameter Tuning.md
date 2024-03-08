@@ -89,3 +89,5 @@ best_model = grid_search.best_estimator_
 test_accuracy = best_model.score(X_test, y_test)
 print("Test Accuracy:", test_accuracy)
 ```
+![Uploading image.png…]()
+
