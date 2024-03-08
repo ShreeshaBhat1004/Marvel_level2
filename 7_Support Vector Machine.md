@@ -28,6 +28,47 @@ SVMs use some clever, but more advanced, math:
 **Classification:** A classic use case (e.g., email spam filtering, image classification).
 **Regression:** SVM variants exist for predicting continuous values.
 **Outlier Detection:** Data points far from the margins could be anomalies
+```
+┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
+       │                                     Support Vector Machine (SVM)                                  │
+       └────────────────────────────────────────────────┬────────────────────────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │         Input Data         │
+                                          │   (Feature Space)          │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │       Margin Maximization  │
+                                          │    (Finding Optimal Hyperplane)   │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │      Support Vectors       │
+                                          │   (Data Points Closest to  │
+                                          │    the Decision Boundary)  │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │     Decision Boundary      │
+                                          │   (Separating Hyperplane)  │
+                                          └────────────────────────────┘
+                                                        │
+                                                        │
+                                                        ▼
+                                          ┌────────────────────────────┐
+                                          │  Classification/Prediction │
+                                          │    (Assigning Class Labels)│
+                                          └────────────────────────────┘
+```
 ```python
 import pandas as pd
 from sklearn import svm
