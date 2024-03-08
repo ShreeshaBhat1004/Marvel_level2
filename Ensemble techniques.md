@@ -168,3 +168,5 @@ print("Accuracy of single decision tree:", accuracy_single)
 ```python
 print("Accuracy of boosted ensemble:", accuracy_boost)
 ```
+![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/8fb9ca9e-3537-487f-9e7f-04020849faf7)
+
