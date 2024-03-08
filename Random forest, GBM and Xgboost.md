@@ -266,3 +266,5 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy) 
 ```
+![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/1b657ee1-e2bf-4fee-a0ac-ab661c07c3e2)
+
