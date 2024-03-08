@@ -36,4 +36,15 @@ print(anomalies)
 ```
 ![image](https://github.com/ShreeshaBhat1004/Marvel_level_2/assets/111550331/a33951b0-1909-49b9-8095-590b7c5c56c4)
 
+```mermaid
+graph TD
+    A[Input Data] --> B{Preprocessing}
+    B --> C{Feature Extraction}
+    C --> D{Model Training}
+    D --> E{Anomaly Scoring}
+    E --> F{Threshold Selection}
+    F --> G{Anomaly Detection}
+    G --> H{Normal Data}
+    G --> I{Anomalous Data}
+```
 
