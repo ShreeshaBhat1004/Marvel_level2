@@ -4,67 +4,11 @@ Unsupervised Learning Technique: K-means is a classic unsupervised machine learn
 Clustering: The goal is to group similar data points together into clusters. Data points within the same cluster will have more similarity to each other than points in different clusters.
 The "K": The "K" in K-means represents the number of clusters you want the algorithm to find. You specify this value in advance.
 ```mermaid
-graph TB
-    subgraph Input_Images
-        Image1
-        Image2
-        Image3
-        Image4
-        Image5
-    end
-
-    subgraph Feature_Extraction
-        FE1[Feature Extraction]
-        FE2[Feature Extraction]
-        FE3[Feature Extraction]
-        FE4[Feature Extraction]
-        FE5[Feature Extraction]
-    end
-
-    subgraph Clustering
-        C[K-means Clustering]
-    end
-
-    subgraph Cluster_Assignment
-        CA1[Assign Image1 to Cluster]
-        CA2[Assign Image2 to Cluster]
-        CA3[Assign Image3 to Cluster]
-        CA4[Assign Image4 to Cluster]
-        CA5[Assign Image5 to Cluster]
-    end
-
-    subgraph Classified_Images
-        CI1[Image1 - Class A]
-        CI2[Image2 - Class B]
-        CI3[Image3 - Class A]
-        CI4[Image4 - Class C]
-        CI5[Image5 - Class B]
-    end
-
-    Input_Images --> Feature_Extraction
-    Image1 --> FE1
-    Image2 --> FE2
-    Image3 --> FE3
-    Image4 --> FE4
-    Image5 --> FE5
-    Feature_Extraction --> Clustering
-    FE1 --> C
-    FE2 --> C
-    FE3 --> C
-    FE4 --> C
-    FE5 --> C
-    Clustering --> Cluster_Assignment
-    C --> CA1
-    C --> CA2
-    C --> CA3
-    C --> CA4
-    C --> CA5
-    Cluster_Assignment --> Classified_Images
-    CA1 --> CI1
-    CA2 --> CI2
-    CA3 --> CI3
-    CA4 --> CI4
-    CA5 --> CI5
+graph LR
+    A[Input Images] --> B[Feature Extraction]
+    B --> C[K-means Clustering]
+    C --> D[Cluster Assignment]
+    D --> E[Classified Images]
 ```
 ### How K-means Works (Simplified)
 
