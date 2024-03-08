@@ -199,10 +199,10 @@ Train and focus on mistakes: Train the first model on the dataset. The data poin
 Train the next model: Now, a new model is trained while paying extra attention to the examples the previous model got wrong. This forces the new model to focus on those hard-to-classify cases.
 Repeat and combine: This process repeats, each time creating a new model that tries to fix the shortcomings of the ensemble so far. Finally, the predictions from all models are combined, usually with a weighted scheme where better-performing models get more say in the final outcome.
 ```
-┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
+       ┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
        │                                            Final Model                                            │
        │                              (Weighted Combination of Weak Learners)                              │
-       └────────────────────────────────────────────────┬────────────────────────────────────────────────┘
+        └────────────────────────────────────────────────┬────────────────────────────────────────────────┘
                                                         │
                                                         │
                                                         ▼
