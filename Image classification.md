@@ -1,9 +1,9 @@
-##### What is K-means Clustering?
+### What is K-means Clustering?
 
 Unsupervised Learning Technique: K-means is a classic unsupervised machine learning algorithm. This means it finds patterns and structures within a dataset without needing labeled examples.
 Clustering: The goal is to group similar data points together into clusters. Data points within the same cluster will have more similarity to each other than points in different clusters.
 The "K": The "K" in K-means represents the number of clusters you want the algorithm to find. You specify this value in advance.
-##### How K-means Works (Simplified)
+### How K-means Works (Simplified)
 
 **Initialization:**
 
@@ -23,21 +23,21 @@ Imagine you have a dataset of customer information, and you want to discover cus
 Assignment: Customers are grouped to the closest centroid.
 Update Centroids: Centroids are moved to the average position of their cluster members.
 **Repeat:** The process iterates, refining the clusters.
-##### Key Points
+### Key Points
 
 **Choosing K**: Choosing the right number of clusters is crucial. Techniques like the "Elbow Method" can help make an informed decision.
 **Sensitive to Initialization**: The results can vary depending on the randomly chosen initial centroids. That's why techniques like K-means++ exist to improve initialization.
 **Assumptions**: K-means works best with roughly spherical clusters of similar size.
-##### Pros
+### Pros
 
 **Simple and understandable**: Easy to implement and visualize.
 **Relatively Fast:** Efficient for moderately sized datasets.
-##### Cons
+### Cons
 
 **Fixing "K" in advance**: You need to know roughly how many clusters to expect beforehand.
 Sensitive to outliers: Outliers can significantly affect cluster formation.
 **Spherical clusters:** It may perform poorly if your clusters have complex shapes.
-##### Use Cases
+### Use Cases
 **Customer Segmentation**: Group customers based on demographics, purchasing habits, etc.
 **Image Compression:** Decrease the number of colors in images by clustering pixels.
 **Document Clustering**: Organize documents based on topic similarity.
