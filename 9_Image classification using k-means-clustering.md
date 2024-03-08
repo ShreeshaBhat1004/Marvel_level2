@@ -3,7 +3,7 @@
 Unsupervised Learning Technique: K-means is a classic unsupervised machine learning algorithm. This means it finds patterns and structures within a dataset without needing labeled examples.
 Clustering: The goal is to group similar data points together into clusters. Data points within the same cluster will have more similarity to each other than points in different clusters.
 The "K": The "K" in K-means represents the number of clusters you want the algorithm to find. You specify this value in advance.
-```
+```mermaid
 graph TB
     subgraph Input_Images
         Image1
