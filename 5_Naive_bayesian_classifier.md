@@ -43,3 +43,39 @@ Now we are ready to classify if a message is spam or normal considering that our
 We can see that
 $a > b$\
 Hence, the message "*Dear friend*" is most probably a normal message. This is how **Naive Bayesian classifier** works. 
+### Code Implementation
+```python
+import pandas as pd
+import numpy as np
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import accuracy_score, confusion_matrix
+
+# Load the dataset directly from the Kaggle link
+data = pd.read_csv('/content/emails.csv') 
+
+# Designate features and labels
+features = data['text']
+labels = data['spam']
+
+# Create a CountVectorizer to convert emails into a bag-of-words representation
+vectorizer = CountVectorizer()
+X = vectorizer.fit_transform(features)
+
+# Split into training and testing sets (80/20 split)
+X_train, X_test, y_train, y_test = train_test_split(X, labels, test_size=0.2, random_state=42) 
+
+# Create a Multinomial Naive Bayes classifier
+model = MultinomialNB()
+
+# Fit the model to the training data
+model.fit(X_train, y_train)
+
+# Make predictions on the test data
+predictions = model.predict(X_test)
+
+# Evaluate performance
+print("Accuracy:", accuracy_score(y_test, predictions))
+print("Confusion Matrix:\n", confusion_matrix(y_test, predictions))
+```
